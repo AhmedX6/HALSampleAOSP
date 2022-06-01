@@ -1,0 +1,6 @@
+package vendor.hardware.automotive.test@1.0;
+
+struct Message {
+    uint32_t id;
+    uint64_t timestamp;
+};

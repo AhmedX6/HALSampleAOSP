@@ -1,0 +1,7 @@
+package vendor.hardware.automotive.test@1.0;
+
+import ITestListener;
+
+interface ITest {
+    send(uint32_t data, ITestListener listener);
+};

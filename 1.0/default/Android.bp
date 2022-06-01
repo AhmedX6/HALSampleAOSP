@@ -1,0 +1,33 @@
+// FIXME: your file license if you have one
+
+cc_defaults {
+    name: "vendor.hardware.automotive.test@defaults",
+    cflags: [
+        //"-Wall",
+        //"-Wextra",
+        //"-Werror",
+    ],
+    shared_libs: [
+        "libbase",
+        "libutils",
+    ],
+}
+
+cc_binary {
+    name: "vendor.hardware.automotive.test@1.0-service",
+    init_rc: ["vendor.hardware.automotive.test@1.0-service.rc"],
+    defaults: ["vendor.hardware.automotive.test@defaults"],
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: [
+        "service.cpp",
+        "Test.cpp",
+    ],
+    shared_libs: [
+        "libhidlbase",
+        "libutils",
+        "liblog",
+        "vendor.hardware.automotive.test@1.0",
+    ],
+    vintf_fragments: ["manifest_vendor.hardware.automotive.test@1.0.xml"],
+}

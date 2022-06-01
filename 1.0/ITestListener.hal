@@ -1,0 +1,5 @@
+package vendor.hardware.automotive.test@1.0;
+
+interface ITestListener {
+    onReceive(Message message);
+};
